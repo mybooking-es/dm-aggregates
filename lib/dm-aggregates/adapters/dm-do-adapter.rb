@@ -62,9 +62,7 @@ module DataMapper
       end
 
       chainable do
-        p "CHAINABLE--"
         def property_to_column_name(property, qualify)
-          p "DM-AGGREGATE-property_to_column_name"
           case property
             when DataMapper::Query::Operator
               aggregate_field_statement(property.operator, property.target, qualify)
